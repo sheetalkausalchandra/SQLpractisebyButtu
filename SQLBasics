@@ -1,0 +1,205 @@
+use MyStockMarket
+
+CREATE TABLE IPODraft (
+  /*  EmployeeID INT PRIMARY KEY,  -- Integer, primary key
+    FirstName VARCHAR(50),      -- String (variable length, max 50 characters)
+    LastName VARCHAR(50),       -- String
+    HireDate DATE,               -- Date (year, month, day)
+    Salary DECIMAL(10, 2)        -- Decimal number (10 digits total, 2 after the decimal)
+*/
+
+COMPANY NAME	SECURITY TYPE	ISSUE PRICE	Symbol	ISSUE START DATE	ISSUE END DATE	PRICE RANGE	DATE OF LISTING
+
+CREATE TABLE IPOdraft (
+    CompanyName VARCHAR(255),      -- 
+    SecurityType VARCHAR(100),     -- 
+    IssuePrice DECIMAL(18, 2),    --DECIMAL for currency)
+    Symbol VARCHAR(50),         
+    IssueStartDate DATE,          --  Date
+    IssueEndDate DATE,            -- Issue End Date
+    PriceRange VARCHAR(100),      -- Price Range (adjust length as needed)
+    DateOfListing DATE            -- Date of Listing
+    -- Add other columns as needed (e.g., ID, exchange, etc.)
+);
+
+select * from IPODraft
+select count (distinct Companyname) from IPODraft
+select distinct COUNT(CompanyName) from IPOdraft
+select count(distinct Companyname) from IPODraft
+INSERT INTO IPOdraft 
+VALUES ('Stallion India Fluorochemicals Limited', 'BE', 90, 'STALLION', '2025-01-16', '2025-01-20', 'Rs. 85 to Rs.90', '2025-01-23');
+
+INSERT INTO IPOdraft 
+VALUES ('Unilex Colours and Chemicals Limited', 'SME', 87, 'UNILEX', '2024-09-25', '2024-09-27', 'Rs.82 to Rs.87', '2024-10-03');
+
+INSERT INTO IPOdraft 
+VALUES ('Petro Carbon and Chemicals Limited', 'SME', 171, 'PCCL', '2024-06-25', '2024-06-27', 'Rs.162 to Rs.171', '2024-07-02');
+
+insert into IPODraft values 
+('Denta Water and Infra Solutions Limited','BE',294, 'DENTA','22-Jan-25','24-Jan-25','Rs.279 to Rs.294','29-Jan-25')
+/*	BE	294	DENTA	22-Jan-25	24-Jan-25	Rs.279 to Rs.294	29-Jan-25
+Rexpro Enterprises Limited	SME	145	REXPRO	22-Jan-25	24-Jan-25	Rs.145	29-Jan-25
+EMA Partners India Limited	SME	124	EMAIN	17-Jan-25	21-Jan-25	Rs.117 to Rs.124	24-Jan-25
+*/
+
+INSERT INTO IPODRAFT 
+VALUES
+    ('Kabra Jewels Limited', 'SME', 128, 'KKJEWELS', '2025-01-15', '2025-01-17', 'Rs.121 to Rs.128', '2025-01-22'),
+    ('Laxmi Dental Limited', 'EQ', 428, 'LAXMIDENTL', '2025-01-13', '2025-01-15', 'Rs.407 to Rs.428', '2025-01-20'),
+    ('Sat Kartar Shopping Limited', 'SME', 81, 'SATKARTAR', '2025-01-10', '2025-01-14', 'Rs.77 to Rs.81', '2025-01-17'),
+    ('Barflex Polyfilms Limited', 'SME', 60, 'BARFLEX', '2025-01-10', '2025-01-15', 'Rs.57 to Rs.60', '2025-01-20'),
+    ('Quadrant Future Tek Limited', 'EQ', 290, 'QUADFUTURE', '2025-01-07', '2025-01-09', 'Rs.275 to Rs.290', '2025-01-14'),
+    ('Capital Infra Trust', 'IV', 99, 'CAPINVIT', '2025-01-07', '2025-01-09', 'Rs.99 to Rs.100', '2025-01-17'),
+    ('Delta Autocorp Limited', 'SME', 130, 'DELTIC', '2025-01-07', '2025-01-09', 'Rs.123 to Rs.130', '2025-01-14'),
+    ('Standard Glass Lining Technology Limited', 'EQ', 140, 'SGLTL', '2025-01-06', '2025-01-08', 'Rs.133 to Rs.140', '2025-01-13');
+
+
+
+
+
+	INSERT INTO IPODRAFT (CompanyName, SecurityType, IssuePrice, Symbol, IssueStartDate, IssueEndDate, PriceRange, DateOfListing) 
+VALUES
+    ('Supreme Facility Management Limited', 'SME', 76, 'SFML', '2024-12-11', '2024-12-13', 'Rs.72 to Rs.76', '2024-12-18'),
+    ('Sammaan Capital Limited', 'DEBT', 1000, 'SCL002', '2024-12-09', '2024-12-20', 'Rs.1000', '2024-12-31'),
+    ('Dhanlaxmi Crop Science Limited', 'SME', 55, 'DHANLAXMI', '2024-12-09', '2024-12-11', 'Rs.52 to Rs.55', '2024-12-16'),
+    ('IIFL Home Finance Limited', 'DEBT', 1000, 'IHFL01', '2024-12-06', '2024-12-19', 'Rs.1000', '2024-12-30'),
+    ('Emerald Tyre Manufacturers Limited', 'SME', 95, 'ETML', '2024-12-05', '2024-12-09', 'Rs.90 to Rs.95', '2024-12-12'),
+    ('Suraksha Diagnostic Limited', 'EQ', 441, 'SURAKSHA', '2024-11-29', '2024-12-03', 'Rs.420 to Rs.441', '2024-12-06'),
+    ('Ganesh Infraworld Limited', 'SME', 83, 'GANESHIN', '2024-11-29', '2024-12-03', 'Rs.78 to Rs.83', '2024-12-06'),
+    ('Agarwal Toughened Glass India Limited', 'SME', 108, 'AGARWALTUF', '2024-11-28', '2024-12-02', 'Rs.105 to Rs.108', '2024-12-05');
+
+
+	INSERT INTO IPODRAFT (CompanyName, SecurityType, IssuePrice, Symbol, IssueStartDate, IssueEndDate, PriceRange, DateOfListing) 
+VALUES
+    ('Denta Water and Infra Solutions Limited', 'BE', 294, 'DENTA', '2025-01-22', '2025-01-24', 'Rs.279 to Rs.294', '2025-01-29'),
+    ('Rexpro Enterprises Limited', 'SME', 145, 'REXPRO', '2025-01-22', '2025-01-24', 'Rs.145', '2025-01-29'),
+    ('EMA Partners India Limited', 'SME', 124, 'EMAIN', '2025-01-17', '2025-01-21', 'Rs.117 to Rs.124', '2025-01-24'),
+    ('Stallion India Fluorochemicals Limited', 'BE', 90, 'STALLION', '2025-01-16', '2025-01-20', 'Rs.85 to Rs.90', '2025-01-23'),
+    ('Kabra Jewels Limited', 'SME', 128, 'KKJEWELS', '2025-01-15', '2025-01-17', 'Rs.121 to Rs.128', '2025-01-22'),
+    ('Laxmi Dental Limited', 'EQ', 428, 'LAXMIDENTL', '2025-01-13', '2025-01-15', 'Rs.407 to Rs.428', '2025-01-20'),
+    ('Sat Kartar Shopping Limited', 'SME', 81, 'SATKARTAR', '2025-01-10', '2025-01-14', 'Rs.77 to Rs.81', '2025-01-17'),
+    ('Barflex Polyfilms Limited', 'SME', 60, 'BARFLEX', '2025-01-10', '2025-01-15', 'Rs.57 to Rs.60', '2025-01-20'),
+    ('Quadrant Future Tek Limited', 'EQ', 290, 'QUADFUTURE', '2025-01-07', '2025-01-09', 'Rs.275 to Rs.290', '2025-01-14'),
+    ('Capital Infra Trust', 'IV', 99, 'CAPINVIT', '2025-01-07', '2025-01-09', 'Rs.99 to Rs.100', '2025-01-17'),
+    ('Delta Autocorp Limited', 'SME', 130, 'DELTIC', '2025-01-07', '2025-01-09', 'Rs.123 to Rs.130', '2025-01-14'),
+    ('Standard Glass Lining Technology Limited', 'EQ', 140, 'SGLTL', '2025-01-06', '2025-01-08', 'Rs.133 to Rs.140', '2025-01-13'),
+    ('Indo Farm Equipment Limited', 'EQ', 215, 'INDOFARM', '2024-12-31', '2025-01-02', 'Rs.204 to Rs.215', '2025-01-07'),
+    ('Anya Polytech & Fertilizers Limited', 'SME', 14, 'ANYA', '2024-12-26', '2024-12-30', 'Rs.13 to Rs.14', '2025-01-02'),
+    ('Unimech Aerospace and Manufacturing Limited', 'EQ', 785, 'UNIMECH', '2024-12-23', '2024-12-26', 'Rs.745 to Rs.785', '2024-12-31');
+
+
+	INSERT INTO IPODRAFT (CompanyName, SecurityType, IssuePrice, Symbol, IssueStartDate, IssueEndDate, PriceRange, DateOfListing) 
+VALUES
+    ('Namo eWaste Management Limited', 'SME', 85, 'NAMOEWASTE', '2024-09-04', '2024-09-06', 'Rs.80 to Rs.85', '2024-09-11'),
+    ('Gala Precision Engineering Limited', 'BE', 529, 'GALAPREC', '2024-09-02', '2024-09-04', 'Rs.503 to Rs.529', '2024-09-09'),
+    ('Jeyyam Global Foods Limited', 'SME', 61, 'JEYYAM', '2024-09-02', '2024-09-04', 'Rs.59 to Rs.61', '2024-09-09'),
+    ('Baazar Style Retail Limited', 'EQ', 389, 'STYLEBAAZA', '2024-08-30', '2024-09-03', 'Rs.370 to Rs.389', '2024-09-06'),
+    ('Boss Packaging Solutions Limited', 'SME', 66, 'BOSS', '2024-08-30', '2024-09-03', 'Rs.66', '2024-09-06'),
+    ('Ecos (India) Mobility & Hospitality Limited', 'EQ', 334, 'ECOSMOBLTY', '2024-08-28', '2024-08-30', 'Rs.318 to Rs.334', '2024-09-04'),
+    ('Aeron Composite Limited', 'SME', 125, 'AERON', '2024-08-28', '2024-08-30', 'Rs.121 to Rs.125', '2024-09-04'),
+    ('Premier Energies Limited', 'EQ', 450, 'PREMIERENE', '2024-08-27', '2024-08-29', 'Rs.427 to Rs.450', '2024-09-03'),
+    ('Vdeal System Limited', 'SME', 112, 'VDEAL', '2024-08-27', '2024-08-29', 'Rs.112', '2024-09-03'),
+    ('Paramatrix Technologies Limited', 'SME', 110, 'PARAMATRIX', '2024-08-27', '2024-08-30', 'Rs.110', '2024-09-04'),
+    ('Jay Bee Laminations Limited', 'SME', 146, 'JAYBEE', '2024-08-27', '2024-08-29', 'Rs.138 to Rs.146', '2024-09-03');
+
+	select MIN(IssuePrice) from IPODraft
+	select max(IssuePrice) from IPODraft
+	--select * from IPODraft where MAX(Issueprice) // this is a wrong data
+	select * from IPODraft
+
+ 
+ CREATE TABLE IPOessay (
+    CompanyName VARCHAR(255),      -- 
+    ESScode VARCHAR(100),     -- 
+    sellPrice DECIMAL(18, 2),    --DECIMAL for currency)
+    Symbol VARCHAR(50),         
+    IssueStartDate DATE,          --  Date
+    IssueEndDate DATE,            -- Issue End Date
+    PriceRange VARCHAR(100),      -- Price Range (adjust length as needed)
+    DateOfListing DATE
+	);
+
+	select * from IPOessay
+
+	INSERT INTO IPOessay
+VALUES
+    ('Namo eWaste Management Limited', 'SME', 85, 'NAMOEWASTE', '2024-09-04', '2024-09-06', 'Rs.80 to Rs.85', '2024-09-11'),
+    ('Gala Precision Engineering Limited', 'BE', 529, 'GALAPREC', '2024-09-02', '2024-09-04', 'Rs.503 to Rs.529', '2024-09-09'),
+    ('Jeyyam Global Foods Limited', 'SME', 61, 'JEYYAM', '2024-09-02', '2024-09-04', 'Rs.59 to Rs.61', '2024-09-09'),
+    ('Baazar Style Retail Limited', 'EQ', 389, 'STYLEBAAZA', '2024-08-30', '2024-09-03', 'Rs.370 to Rs.389', '2024-09-06'),
+    ('Boss Packaging Solutions Limited', 'SME', 66, 'BOSS', '2024-08-30', '2024-09-03', 'Rs.66', '2024-09-06'),
+    ('Ecos (India) Mobility & Hospitality Limited', 'EQ', 334, 'ECOSMOBLTY', '2024-08-28', '2024-08-30', 'Rs.318 to Rs.334', '2024-09-04'),
+    ('Aeron Composite Limited', 'SME', 125, 'AERON', '2024-08-28', '2024-08-30', 'Rs.121 to Rs.125', '2024-09-04'),
+    ('Premier Energies Limited', 'EQ', 450, 'PREMIERENE', '2024-08-27', '2024-08-29', 'Rs.427 to Rs.450', '2024-09-03'),
+    ('Vdeal System Limited', 'SME', 112, 'VDEAL', '2024-08-27', '2024-08-29', 'Rs.112', '2024-09-03'),
+    ('Paramatrix Technologies Limited', 'SME', 110, 'PARAMATRIX', '2024-08-27', '2024-08-30', 'Rs.110', '2024-09-04'),
+    ('Jay Bee Laminations Limited', 'SME', 146, 'JAYBEE', '2024-08-27', '2024-08-29', 'Rs.138 to Rs.146', '2024-09-03');
+
+
+
+	 
+ CREATE TABLE orders (      -- 
+    OrderID VARCHAR(100),     -- 
+    CustomerID VARCHAR(50),     
+	EmployeeID VARCHAR(50),    
+	ShipperID VARCHAR(50),    
+    OrderDate DATE,          --  Date
+	);
+
+	select * from orders
+
+	insert into orders
+values
+(10308,1,7,3,'1996-09-18'),
+(10309,2,3,1,'1996-09-19'),
+(10310,3,8,2,'1996-09-20')
+
+update orders
+set CustomerID = 1
+where OrderID = 10308;
+
+update orders
+set CustomerID = 2
+where OrderID = 10309;
+
+update orders
+set CustomerID = 3
+where OrderID = 10310;
+
+CustomerID	CustomerName	ContactName	Address	City	PostalCode	Country
+1
+
+Alfreds Futterkiste	Maria Anders	Obere Str. 57	Berlin	12209	Germany
+2	Ana Trujillo Emparedados y helados	Ana Trujillo	Avda. de la Constitución 2222	México D.F.	05021	Mexico
+3	Antonio Moreno Taquería	Antonio Moreno	Mataderos 2312	México D.F.	05023	Mexico
+create table customers
+(
+CustomerID INT Primary key,
+CustomerName Varchar(200),
+ContactName  Varchar(200),
+Address Varchar(200),
+City Varchar(200),
+PostalCode Varchar(200),
+Country Varchar(200),
+);
+
+insert into customers
+values
+(1,'Alfreds','Alfreds','23 street kazhipattur','Chennai',600202,'India'),
+(2,'Sana','Sana','12 indore bronze','Indore',213345,'India'),
+(3,'Bindu','Bindu','14 Dubarose street','Megahalaya',456123,'India')
+
+select * from customers
+select * from orders
+
+update orders 
+set CustomerID = NULL;
+
+use master
+
+// order and customers table is available only in master
+
+
+//ipodraft is in my stock market
+
+
