@@ -1,5 +1,7 @@
 use MyStockMarket
 
+CREATE A TABLE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 CREATE TABLE IPODraft (
   /*  EmployeeID INT PRIMARY KEY,  -- Integer, primary key
     FirstName VARCHAR(50),      -- String (variable length, max 50 characters)
@@ -8,7 +10,7 @@ CREATE TABLE IPODraft (
     Salary DECIMAL(10, 2)        -- Decimal number (10 digits total, 2 after the decimal)
 */
 
-COMPANY NAME	SECURITY TYPE	ISSUE PRICE	Symbol	ISSUE START DATE	ISSUE END DATE	PRICE RANGE	DATE OF LISTING
+CREATE A TABLE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 CREATE TABLE IPOdraft (
     CompanyName VARCHAR(255),      -- 
@@ -21,11 +23,16 @@ CREATE TABLE IPOdraft (
     DateOfListing DATE            -- Date of Listing
     -- Add other columns as needed (e.g., ID, exchange, etc.)
 );
-
+**********************************************************************************
 select * from IPODraft
+*******************************************************************************
+COUNT FUNCTION ========================================================================
 select count (distinct Companyname) from IPODraft
+***********DISTINCT FUNCTIONS***************************************************
 select distinct COUNT(CompanyName) from IPOdraft
 select count(distinct Companyname) from IPODraft
+
+**********************INSERT FUNCTION******************************************************
 INSERT INTO IPOdraft 
 VALUES ('Stallion India Fluorochemicals Limited', 'BE', 90, 'STALLION', '2025-01-16', '2025-01-20', 'Rs. 85 to Rs.90', '2025-01-23');
 
@@ -52,8 +59,6 @@ VALUES
     ('Capital Infra Trust', 'IV', 99, 'CAPINVIT', '2025-01-07', '2025-01-09', 'Rs.99 to Rs.100', '2025-01-17'),
     ('Delta Autocorp Limited', 'SME', 130, 'DELTIC', '2025-01-07', '2025-01-09', 'Rs.123 to Rs.130', '2025-01-14'),
     ('Standard Glass Lining Technology Limited', 'EQ', 140, 'SGLTL', '2025-01-06', '2025-01-08', 'Rs.133 to Rs.140', '2025-01-13');
-
-
 
 
 
@@ -106,7 +111,7 @@ VALUES
 	select max(IssuePrice) from IPODraft
 	--select * from IPODraft where MAX(Issueprice) // this is a wrong data
 	select * from IPODraft
-
+**************CREATE A TABLE************************************************************************************************************
  
  CREATE TABLE IPOessay (
     CompanyName VARCHAR(255),      -- 
@@ -119,9 +124,9 @@ VALUES
     DateOfListing DATE
 	);
 
-	select * from IPOessay
+select * from IPOessay
 
-	INSERT INTO IPOessay
+INSERT INTO IPOessay
 VALUES
     ('Namo eWaste Management Limited', 'SME', 85, 'NAMOEWASTE', '2024-09-04', '2024-09-06', 'Rs.80 to Rs.85', '2024-09-11'),
     ('Gala Precision Engineering Limited', 'BE', 529, 'GALAPREC', '2024-09-02', '2024-09-04', 'Rs.503 to Rs.529', '2024-09-09'),
@@ -135,8 +140,7 @@ VALUES
     ('Paramatrix Technologies Limited', 'SME', 110, 'PARAMATRIX', '2024-08-27', '2024-08-30', 'Rs.110', '2024-09-04'),
     ('Jay Bee Laminations Limited', 'SME', 146, 'JAYBEE', '2024-08-27', '2024-08-29', 'Rs.138 to Rs.146', '2024-09-03');
 
-
-
+**********************CREATE A TABLE*****************************************************
 	 
  CREATE TABLE orders (      -- 
     OrderID VARCHAR(100),     -- 
@@ -153,6 +157,7 @@ values
 (10308,1,7,3,'1996-09-18'),
 (10309,2,3,1,'1996-09-19'),
 (10310,3,8,2,'1996-09-20')
+**********UPDATE QUERY**********************************************************************************************
 
 update orders
 set CustomerID = 1
@@ -165,13 +170,7 @@ where OrderID = 10309;
 update orders
 set CustomerID = 3
 where OrderID = 10310;
-
-CustomerID	CustomerName	ContactName	Address	City	PostalCode	Country
-1
-
-Alfreds Futterkiste	Maria Anders	Obere Str. 57	Berlin	12209	Germany
-2	Ana Trujillo Emparedados y helados	Ana Trujillo	Avda. de la Constitución 2222	México D.F.	05021	Mexico
-3	Antonio Moreno Taquería	Antonio Moreno	Mataderos 2312	México D.F.	05023	Mexico
+*****************TABLE CREATION**********************************************************
 create table customers
 (
 CustomerID INT Primary key,
@@ -182,7 +181,7 @@ City Varchar(200),
 PostalCode Varchar(200),
 Country Varchar(200),
 );
-
+***************INSERT QUERY********************************************************
 insert into customers
 values
 (1,'Alfreds','Alfreds','23 street kazhipattur','Chennai',600202,'India'),
@@ -198,7 +197,6 @@ set CustomerID = NULL;
 use master
 
 // order and customers table is available only in master
-
 
 //ipodraft is in my stock market
 
