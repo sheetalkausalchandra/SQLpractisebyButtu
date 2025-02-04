@@ -1,0 +1,19 @@
+Atomicity +++++++++++++++
+I am transferring money to other account. So either it gets transfer sucessfully or completely fail. it shouldnt be partial
+similarly in terms of SQL, supposing it should be updated either sucessfully or completely error. so this is what atomicity ensures to happen in a SQL database. 
+
+Consistency +++++++++++++++++++
+it means that your database always follows rules. 
+supposing you have a credit card limit and it shouldnt go below 100rs. 
+so in terms of sql, the consistency ensures that no transactions happen that violates the predefined rules and constraints
+
+Isolation ++++++++++++++++++++
+isolation ensures that every transactions that happens is independent. 
+for example, if i am booking a seat in bus, and I complete booking the seat. and then only the other people booking the seat get to know that they cannot book the same seat anymore.
+so in terms of sql, isolation simply means that action of one user doesnt interfere with the action of other user. 
+
+Durability ++++++++++++++++++++++
+durability means after the money is transferred successfully, and you see the mobile data is offline. so this is not going to affect as the money is also transferred and is deposited. 
+so in terms of sql, durability means that after a change or modifications is done in the database, even if the system crashes the data is safe and secure. 
+the comitted changes remain to be preserved
+
