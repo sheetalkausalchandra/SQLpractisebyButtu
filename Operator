@@ -1,0 +1,40 @@
+https://techbeamers.com/sql-programming-test/#test-your-sql-programming-skills
+
+Retrieve the names of every customer who joined before ‘2022-03-25’
+
+	SELECT * FROM cust_tbl where join_date < '2022-03-25';
+	SELECT * FROM cust_tbl where join_date > '2022-03-25';
+	SELECT * FROM cust_tbl where join_date = '2022-03-25';
+	SELECT * FROM cust_tbl where join_date != '2022-03-25';
+	SELECT * FROM cust_tbl where join_date >= '2022-03-25';
+	SELECT * FROM cust_tbl where join_date <= '2022-03-25';
+
+ List out every order made by “Kim.”
+
+	select * from cust_tbl
+	select * from ord_tbls
+
+	   SELECT * FROM ord_tbls
+   WHERE cust_id = (SELECT cust_id FROM cust_tbl WHERE cust_name = 'Kim');
+
+   explaination--
+
+  2 tables namely ord_tbls and cust_tbl
+cust_id is in both tables
+i am seelcting all records for customer id from cust table 
+and in the sub query
+i am selecting customer id from cust_tbl 
+
+
+Step 1:
+The query first looks in the cust_tbl table to find the customer ID of the person whose name is 'Kim'.
+
+SELECT cust_id FROM cust_tbl WHERE cust_name = 'Kim';
+Step 2:
+It then takes that customer ID and uses it to look in the ord_tbls table to find all orders that have the same customer ID.
+
+
+
+
+  
+    
